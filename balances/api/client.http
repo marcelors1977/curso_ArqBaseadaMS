@@ -1,0 +1,30 @@
+
+### endpoint para exibir balance atualizado. Buscar, no banco de dados wallet_core
+### uma conta fake gerada ou criar um diretamente no banco de dados balances
+### através do end point http://localhost:3003/balances conforme exemplo a frente
+GET http://localhost:3003/balances/search/99999999999999999 HTTP/1.1
+
+
+
+
+#### cria balance diretamente no banco de dados balances
+POST http://localhost:3003/balances HTTP/1.1
+Content-Type: application/json
+
+{
+    "AccountID":"99999999999999999", 
+    "AccountBalance":900, 
+    "DateTransaction": "2023-12-02T00:00:00Z"
+}
+
+### cria transaction no banco de dados balances
+POST http://localhost:3003/transaction HTTP/1.1
+Content-Type: application/json
+
+{
+    "ID":"2222222", 
+    "AccountIDFrom":"3333333333333", 
+    "AccountIDTo":  "4444444444444", 
+    "Amount":1, 
+    "DateTransaction":"2023-12-02T00:00:00Z"
+}

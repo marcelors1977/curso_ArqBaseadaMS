@@ -1,0 +1,62 @@
+### client 1
+POST http://localhost:8080/client HTTP/1.1
+Content-Type: application/json
+
+{
+    "Name": "Client1",
+    "Email": "client1@email"
+}
+
+
+### client 2
+POST http://localhost:8080/client HTTP/1.1
+Content-Type: application/json
+
+{
+    "Name": "Client2",
+    "Email": "client2@email"
+}
+
+
+### account 1
+POST http://localhost:8080/account HTTP/1.1
+Content-Type: application/json
+
+{
+    "client_id": inserir id client 1
+}
+
+### account 1 - alterar balance da conta
+POST http://localhost:8080/{account_id} HTTP/1.1
+Content-Type: application/json
+
+{
+    "balance": 100
+}
+
+### account 2
+POST http://localhost:8080/account HTTP/1.1
+Content-Type: application/json
+
+{
+    "client_id": inserir id client 2
+}
+
+### account 2 - alterar balance da conta
+POST http://localhost:8080/account/update/{account_id} HTTP/1.1
+Content-Type: application/json
+
+{
+    "balance": 100
+}
+
+
+#### transaction
+POST http://localhost:8080/transaction HTTP/1.1
+Content-Type: application/json
+
+{
+    "account_id_from": inserir id account 1,
+    "account_id_to": inserir id account 2,
+    "amount": 1
+}
