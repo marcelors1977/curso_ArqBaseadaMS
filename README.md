@@ -8,7 +8,7 @@ O projeto é composto por 2 microsserviços `walletcore_app` e `balances_app`
 ## Como Rodar a Aplicação
 
 ```
-git clone https://github.com/marcelors1977/MS-catalog.git
+git clone https://github.com/marcelors1977/curso_ArqBaseadaMS.git
 docker compose up -d
 ```
 
